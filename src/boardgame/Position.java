@@ -6,8 +6,8 @@ public class Position {
 	private int column;
 	
 	public Position(int row, int column) {
-		setColumn(column);
-		setRow(row);
+		this.setColumn(column);
+		this.setRow(row);
 	}
 	
 	public int getRow() {

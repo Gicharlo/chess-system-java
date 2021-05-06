@@ -6,6 +6,8 @@ import chess.pieces.Rook;
 
 public class ChessMath {
 	
+	
+	
 	private Board board;
 	
 	public ChessMath() {

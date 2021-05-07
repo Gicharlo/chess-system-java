@@ -20,11 +20,15 @@ public class Program {
 				UI.clearScreen();
 				UI.printBoard(chessMath.getPieces());
 				System.out.println();
-				System.out.println("Source: ");
+				System.out.print("Source: ");
 				ChessPosition source = UI.ReadChessPosition(sc);
 				
+				boolean[][] possibleMoves  = chessMath.possibleMoves(source);
+				UI.clearScreen();
+				UI.printBoard(chessMath.getPieces(), possibleMoves);
+				
 				System.out.println();
-				System.out.println("Target:");
+				System.out.print("Target:");
 				ChessPosition target = UI.ReadChessPosition(sc);
 				
 				ChessPiece capturedPiece = chessMath.PerformChessMove(source, target);	

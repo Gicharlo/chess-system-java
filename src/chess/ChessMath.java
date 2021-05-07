@@ -1,7 +1,6 @@
 package chess;
 
 import boardgame.Board;
-import boardgame.BoardException;
 import boardgame.Piece;
 import boardgame.Position;
 import chess.pieces.King;
@@ -18,7 +17,10 @@ public class ChessMath {
 	}
 	private void validateSourcePosition(Position position) {
 		if(!board.thereAPiece(position)) {
-			throw new ChessException("There is no piece on source position ");	
+			throw new ChessException("There is no piece on source position. ");	
+		}
+		if(!board.piece(position).IsThereAnyPossibleMove()) {
+			throw new ChessException("There is no possible moves  for the chosen piece. ");
 		}
 	}
 	
